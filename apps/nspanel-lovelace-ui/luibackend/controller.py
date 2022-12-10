@@ -272,9 +272,9 @@ class LuiController(object):
             apis.ha_api.get_entity(entity_id).call_service("stop_cover")
         if button_type == "down":
             apis.ha_api.get_entity(entity_id).call_service("close_cover")
-        if button_type == "positionSlider":
-            pos = int(value)
-            apis.ha_api.get_entity(entity_id).call_service("set_cover_position", position=pos)
+        # if button_type == "positionSlider":
+        #     pos = int(value)
+        #     apis.ha_api.get_entity(entity_id).call_service("set_cover_position", position=pos)
         if button_type == "tiltOpen":
             apis.ha_api.get_entity(entity_id).call_service("open_cover_tilt")
         if button_type == "tiltStop":
