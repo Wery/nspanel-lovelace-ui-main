@@ -716,14 +716,14 @@ class LuiPagesGen(object):
         device_class = entity.attributes.get("device_class", "window")
         icon_id      = get_icon(entityType, state=entity.state, device_class=device_class)
         
-        # pos = entity.attributes.get("current_position")
-        # if pos is None:
-        #     pos_status = entity.state
-        #     pos = "disable"
-        # else:
-        #     pos_status = pos
-        pos_status = entity.state
-        pos = "disable"
+        pos = entity.attributes.get("current_position")
+        if pos is None:
+            pos_status = entity.state
+            pos = "disable"
+        else:
+            pos_status = pos
+        # pos_status = entity.state
+        # pos = "disable"
         
         pos_translation = ""
         icon_up   = ""
@@ -744,8 +744,8 @@ class LuiPagesGen(object):
         bits = entity.attributes.supported_features
 
         # position supported
-        if bits & 0b00001111:
-            pos_translation = get_translation(self._locale, "frontend.ui.card.cover.position")
+        # if bits & 0b00001111:
+        #     pos_translation = get_translation(self._locale, "frontend.ui.card.cover.position")
         if bits & 0b00000001: # SUPPORT_OPEN
             if ( pos != 100 and not (entity.state == "open" and pos == "disable") ):
                 icon_up_status = "enable"
