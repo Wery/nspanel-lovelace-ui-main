@@ -3152,10 +3152,10 @@ function HandleButtonEvent(words): void {
                 setIfExists(id + '.CLOSE', true);
                 break;
             case 'positionSlider':
-                (function () { if (timeoutSlider) { clearTimeout(timeoutSlider); timeoutSlider = null; } })();
-                timeoutSlider = setTimeout(async function () {
-                    setIfExists(id + '.SET', parseInt(words[4])) ? true : setIfExists(id + '.ACTUAL', parseInt(words[4]));
-                }, 250);
+                // (function () { if (timeoutSlider) { clearTimeout(timeoutSlider); timeoutSlider = null; } })();
+                // timeoutSlider = setTimeout(async function () {
+                //     setIfExists(id + '.SET', parseInt(words[4])) ? true : setIfExists(id + '.ACTUAL', parseInt(words[4]));
+                // }, 250);
                 break;
             case 'tiltOpen':
                 setIfExists(id + '.TILT_OPEN', true);
