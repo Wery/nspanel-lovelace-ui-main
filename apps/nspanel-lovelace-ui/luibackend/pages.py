@@ -274,9 +274,9 @@ class LuiPagesGen(object):
             icon_up   = ""
             icon_stop = ""
             icon_down = ""
-            icon_up_status = "disable"
-            icon_stop_status = "disable"
-            icon_down_status = "disable"
+            icon_up_status = "enable"
+            icon_stop_status = "enable"
+            icon_down_status = "enable"
             bits = entity.attributes.supported_features
             pos = entity.attributes.get("current_position")
             if pos is None:
@@ -727,9 +727,9 @@ class LuiPagesGen(object):
         icon_up   = ""
         icon_stop = ""
         icon_down = ""
-        icon_up_status = "disable"
-        icon_stop_status = "disable"
-        icon_down_status = "disable"
+        icon_up_status = "enable"
+        icon_stop_status = "enable"
+        icon_down_status = "enable"
         textTilt = ""
         iconTiltLeft = ""
         iconTiltStop = ""
