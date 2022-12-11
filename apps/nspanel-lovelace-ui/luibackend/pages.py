@@ -284,6 +284,9 @@ class LuiPagesGen(object):
                 pos = "disable"
             else:
                 pos_status = pos            
+        
+            pos = "disable"
+
             if bits & 0b00000001: # SUPPORT_OPEN
                 # if ( pos != 100 and not (entity.state == "open" and pos == "disable") ) or item.assumedState:
                 icon_up_status = "enable"
@@ -723,6 +726,8 @@ class LuiPagesGen(object):
         else:
             pos_status = pos
         
+        pos = "disable"
+
         pos_translation = ""
         icon_up   = ""
         icon_stop = ""
